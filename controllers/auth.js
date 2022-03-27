@@ -11,8 +11,12 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   const { email, password } = req.body;
-  if (!email || !password) {
-    throw new BadRequestError('Please Provide a password');
+  if (!email) {
+    throw new BadRequestError('email cannot be empty');
+  }
+
+  if (!password) {
+    throw new BadRequestError('Please provide a pasword');
   }
 
   const user = await User.findOne({ email });
