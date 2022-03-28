@@ -33,9 +33,9 @@ paths:
               $ref: '#/components/schemas/RegisterUserRequest'
 
             example:
-              name: Ken
+              name: example
 
-              email: ken@gmail.com
+              email: example@gemail.com
 
               password: secret
 
@@ -71,7 +71,7 @@ paths:
               $ref: '#/components/schemas/LoginUserRequest'
 
             example:
-              email: ola@gmail.com
+              email: example@email.com
 
               password: secret
 
@@ -107,9 +107,9 @@ paths:
               $ref: '#/components/schemas/CreateJobsRequest'
 
             example:
-              email: kelly1@gmail.com
+              company: company name
 
-              password: secret
+              position: job position
 
         required: true
 
@@ -242,9 +242,9 @@ components:
           type: string
 
       example:
-        name: Ken
+        name: example
 
-        email: ken@gmail.com
+        email: example@gemail.com
 
         password: secret
 
@@ -266,7 +266,7 @@ components:
           type: string
 
       example:
-        email: ola@gmail.com
+        email: example@email.com
 
         password: secret
 
@@ -274,23 +274,23 @@ components:
       title: CreateJobsRequest
 
       required:
-        - email
+        - company
 
-        - password
+        - position
 
       type: object
 
       properties:
-        email:
+        company:
           type: string
 
-        password:
+        position:
           type: string
 
       example:
-        email: kelly1@gmail.com
+        company: company name
 
-        password: secret
+        position: job poition
 
   securitySchemes:
     bearer:
@@ -301,6 +301,10 @@ components:
 security: []
 
 tags:
+  - name: Misc
+
+    description: ''
+
   - name: Auth
 
     description: ''
