@@ -301,10 +301,6 @@ components:
 security: []
 
 tags:
-  - name: Misc
-
-    description: ''
-
   - name: Auth
 
     description: ''
